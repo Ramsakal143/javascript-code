@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        var arr = ["Ram", "34", 34000, "Techpile",["Lucknow",226022,["Utter-Pradesh"]]]
+        // var name = arr[0]
+        // var age = arr[1]
+        // var salary = arr[2]
+        // var cmp = arr[3]
+
+       var [name, age, salary, cmp,[city,pincode,[state]]] =  arr
+        console.log(`
+                    the name of = ${name} 
+                    your age : ${age},
+                    your salary : ${salary}
+                    your company : ${cmp}
+                    your pincode : ${pincode}
+                    your city : ${city}
+                    your state : ${state}
+        `)
+    </script>
+</body>
+
+</html>

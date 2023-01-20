@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select onchange="demo()">
+        <option>--Select Course--</option>
+        <option >HTML</option>
+        <option>CSS</option>
+        <option>JAVASCRIPT</option>
+        <option >C#</option>
+        <option>JAVA</option>
+        <option>C PROGRAMMING</option>
+        <option>PHP</option>
+        <option>MERN</option>
+    </select>
+    <br><br>
+    <input type="text" id="txt" value="kmokmkom" disabled>
+    <button>GET VALUE</button>
+    <script>
+        function demo()
+        {
+            var v=document.querySelector("select").value
+            // var txt=document.querySelector("#txt")
+            if(v=="HTML"){
+                document.querySelector("#txt").value="500"
+            }
+            else if(v=="CSS"){
+                txt.value="1500"
+            }
+            else if(v=="JAVASCRIPT"){
+                txt.value="1000"
+            }
+            else if(v=="C#"){
+                txt.value="1200"
+            }
+            else if(v=="JAVA"){
+                txt.value="2100"
+            }
+            else if(v=="PHP"){
+                txt.value="2400"
+            }
+            else if(v=="MERN"){
+                txt.value="2500"
+            }
+            else{
+                alert("please select another option")
+            }
+        }
+    </script>
+</body>
+</html>

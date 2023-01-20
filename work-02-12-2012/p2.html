@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        /* .outer{
+            min-height: 300px;
+            width: 500px;
+            background: red;
+            margin: 50px auto;
+        } */
+        #para{
+            display: none;
+        }
+        #para1{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="row">
+            <div class="col-12" style="display: flex;">
+                <input type="button" value="Techpile" class="text-center fs-4 bg-primary rounded text-white fw-bold" style="margin-left: 100px; margin-top: 20px; width: 200px;" onclick="demo()">
+                <input type="button" value="Software" class="text-center fs-4 bg-info rounded text-white fw-bold" style="margin-left: 10px; margin-top: 20px; width: 200px; height: 50px;" onclick="demo1()">
+                <input type="button" value="Software" class="text-center fs-4 bg-info rounded text-white fw-bold" style="margin-left: 10px; margin-top: 20px; width: 200px; height: 50px;" onclick="demo1()">
+                
+            </div>
+            <div class="col-12">
+                <p id="para" class="p-2 text-white fs-6 bg-info mt-2 m-5 rounded" style="text-align: justify; width: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, fugit minus officia deleniti quibusdam mollitia porro quo iste atque, qui dolores fuga facilis nostrum id. Inventore autem, exercitationem esse fugiat, expedita velit veritatis quia cumque sunt, vel unde consequuntur perferendis. Necessitatibus ipsa quibusdam commodi earum, deleniti distinctio excepturi ullam esse!</p>
+                <p id="para1" class="p-2 text-white fs-6 bg-dark mb-5 m-3 rounded" style="text-align: justify; width: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, fugit minus officia deleniti quibusdam mollitia porro quo iste atque, qui dolores fuga facilis nostrum id. Inventore autem, exercitationem esse fugiat, expedita velit veritatis quia cumque sunt, vel unde consequuntur perferendis. Necessitatibus ipsa quibusdam commodi earum, deleniti distinctio excepturi ullam esse!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+         var x=document.querySelector("#para")
+         var y=document.querySelector("#para1")
+        function demo()
+        {
+            // if(x.style.display="none"){
+                x.style.display="block"
+                y.style.display="none"
+            // }   
+            
+        }
+        function demo1(){
+            // if(y.style.display="none"){
+                x.style.display="none"
+                y.style.display="block"
+            // }
+        }
+            
+    </script>
+</body>
+</html>

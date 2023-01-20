@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table>
+
+    </table>
+   
+        <script>
+            var studentInfo=[
+            {
+                name:"RAM SAKAL",
+                age:30,
+                Branch:"CSE",
+                year:2019,
+                city:"LKO",
+            },
+            {
+                name:"AJAY",
+                age:30,
+                Branch:"ME",
+                year:2019,
+                city:"GONDA"
+            },
+            {
+                name:"VIAJY",
+                age:30,
+                Branch:"ME",
+                year:2019,
+                city:"VARANASI"
+            },
+            {
+                name:"SAHANI",
+                age:20,
+                Branch:"CHENICAL ENGG.",
+                year:2019,
+                city:"AGARA"
+            },
+            ]
+
+            // console.log(studentInfo[0].name)
+
+            var res= "<table border='1' cellpadding='15' cellspacing='10'>"
+            studentInfo.forEach((data)=>{
+                res+=`
+                    <tr>
+                        <td style='background:yellow;'>${data.name}</td>    
+                        <td style='background:skyblue;'>${data.age}</td>    
+                        <td style='background:hotpink;'>${data.Branch}</td>    
+                        <td style='background:blue;'>${data.year}</td>    
+                        <td style='background:green;'>${data.city}</td>    
+                    </tr>
+                `
+            })
+            res+="<table>"
+                document.write(res)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <p class="abc">HTML 1</p>
+    <p class="abc">CSS 2</p>
+    <p class="abc">JAVASCRIPT 3</p>
+    <p class="abc">PHP 4</p>
+    <button onclick="demo()">CLICK ME</button>
+
+    <script>
+        function demo()
+        {
+            var x=document.getElementsByClassName("abc")
+            var res=res+"<ol>"
+            for(var i=0; i<x.length; i++){
+                res=res+"<li>"+x[i].innerText+"</li>"
+                // alert(res)
+            }
+            res=res+"</ol>"
+            // alert(res)
+            document.getElementById("h1").innerHTML=res
+
+        }
+
+
+
+
+        // var res = "<select>"
+        //     for (var me of arr) {
+        //         res = res + "<option>" + me + "</option>"
+        //     }
+        //     res += "</select>"
+        //     document.querySelector("p").innerHTML = res
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <style>
+            .form-control{
+                margin-bottom: 3%;
+            }
+        </style>
+</head>
+<body>
+    <div class="container-fluid pt-5 bg-info pb-5">
+        <div class="col-sm-4 mx-auto">
+            <input type="text" class="input-group form-control" id="name" placeholder="Enter your name">
+            <input type="tel" class="form-control" id="mob" placeholder="Enter your mobile">
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            <input type="text" class="form-control" id="city" placeholder="Enter your city">
+            <input type="file" class="form-control" id="fl" >
+            <img src="" id="im" height="30px" >
+            <input type="button" onclick="add()" id="btn" class="btn btn-warning" value="Save">
+        </div>
+    </div>
+    <div id="t"></div>
+
+    <script>
+        var studentData=[]
+
+        var Name=document.querySelector('#name')
+        var Mobile=document.querySelector('#mob')
+        var Email=document.querySelector('#email')
+        var City=document.querySelector('#city')
+        var File=document.querySelector('#fl')
+        var btn=document.querySelector('#btn')
+
+        function add(){
+            
+
+            var fileName=File.value.split('\\').pop()
+            // alert(fileName)
+            studentData.push({Name:Name.value,Mobile:Mobile.value,Email:Email.value,City:City.value,File:fileName})
+            // console.log(studentData)
+
+            showData()
+        }
+
+        function showData(){
+            var res="<table border='1' class='border border-stripted'><tr ><th>roll</th><th>Name</th><th>Mobile</th><th>Email</th><th>City</th><th>Picture</th><th>Edit</th><th>Delete</th></tr>"
+                var sr_no=0;
+            studentData.forEach((data)=>{
+                sr_no++
+                res+=`
+                    <tr>
+                        <td>${sr_no}</td>
+       \                <td>${data.Name}</td>
+                        <td>${data.Mobile}</td>
+                        <td>${data.Email}</td>
+                        <td>${data.City}</td>
+                        <td><img src='images/${data.File}' height="30px" /></td>
+                        <td><button class='btn btn-warning' onclick='edit(this)'>Edit</button></td>
+                        <td><button class='btn btn-primary' onclick="remove(this)">Delete</button></td>
+                    </tr>
+                `
+            })
+            res+='</table>'
+            document.querySelector('#t').innerHTML=res
+        }
+        
+        function remove(x){
+            var itoDelte=x.parentElement.parentElement.firstElementChild.innerText-1
+            var status=window.confirm('Are you sure want to delete this student..?')
+            if(status==true){
+                studentData.splice(itoDelte,1)
+            }
+            showData()
+        }
+
+        function edit(x){
+            var editStudent=x.parentElement.parentElement.firstElementChild.innerText-1
+            btn.value="UPDATE"
+            Name.value=studentData[editStudent].Name
+            Email.value=studentData[editStudent].Email
+            Mobile.value=studentData[editStudent].Mobile
+            City.value=studentData[editStudent].City
+            document.querySelector('#im').src='images/{studentData[editStudent].File}'
+
+        }
+    </script>
+</body>
+</html>

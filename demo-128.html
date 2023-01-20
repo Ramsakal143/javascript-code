@@ -1,0 +1,22 @@
+<script>
+class MyClass
+{
+constructor(name,age)   
+{
+this.Name=name  // Instance variable // object level variable
+this.Age=age
+this.Salary=20000
+}
+showData()
+{
+    console.log(`
+        Name : ${this.Name}
+        Age : ${this.Age}
+        Salary : ${this.Salary}
+    `)
+}
+}
+var x=new MyClass("ram",19)  
+console.log(x)  
+x.showData()    
+</script>

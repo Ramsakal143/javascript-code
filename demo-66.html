@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Facilis ipsum at voluptatem itaque doloribus ipsa?</p>
+    <h6>Lorem ipsum dolor sit amet consectetur.</h6>
+    <input type="text" />
+
+
+<script>
+    // window.addEventListener("cut",function()
+    // {
+    //     alert("cut option disable Here..!")
+    //     event.preventDefault()
+    // })
+    // window.addEventListener("copy",function()
+    // {
+    //     alert("copy option disable Here..!")
+    //     event.preventDefault()
+    // })
+    // window.addEventListener("paste",function()
+    // {
+    //     alert("paste option disable Here..!")
+    //     event.preventDefault()
+    // })
+    // window.addEventListener("contextmenu",function()
+    // {
+    //     alert("contextmenu option disable Here..!")
+    //     event.preventDefault()
+    // })
+
+
+    function demo()
+    {
+        alert("copy, cut, paste, contextmenu Disable Here....!")
+        event.preventDefault()
+    }
+    window.addEventListener("copy",demo)
+    window.addEventListener("cut",demo)
+    window.addEventListener("paste",demo)
+    window.addEventListener("contextmenu",demo)
+
+</script>
+
+</body>
+
+</html>

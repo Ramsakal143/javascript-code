@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select>
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JS</option>
+        <option>PHP</option>
+        <option>PYTHON</option>
+        <option>JQUERY</option>
+        <option>MONGODB</option>
+        <option>REACT</option>
+    </select>
+    <script>
+        function demo()
+        {
+            // var a=document.querySelector("select").value
+            alert(this.value)
+        }
+        document.querySelector("select").addEventListener("change",demo)
+
+
+        // document.querySelector("select").addEventListener("change",
+        // function(event){
+        //     var x=document.querySelector("select").value
+        //     alert(x)
+        //     event.stopPropagation()
+        // })
+        
+
+
+    </script>
+</body>
+</html>

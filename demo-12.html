@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <p>MESSAGE SHOW</p>
+    <input type="button" value="Print" onclick="demo()"/>
+    <script>
+        var demo =()=>{
+            var x=document.querySelector("input").value
+            var msg=document.querySelector("p")
+            msg.innerText=`Name is : ${x}`
+        }
+    </script>
+</body>
+</html>

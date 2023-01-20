@@ -1,0 +1,28 @@
+<script>
+    class parent
+    {
+        method1()
+        {
+            console.log("hello i am from parent class...present in method1")
+        }
+    }
+
+    class child extends parent
+    {
+        method2()
+        {
+            super.method1()
+            console.log("hello i am from child one class...present in method2")
+        }
+    }
+    class subChild extends child 
+    {
+        method3()
+        {
+            super.method2()
+            console.log("hello i am from child two class...present in method3")
+        }
+    }
+    var obj=new subChild()
+    obj.method3()
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p{
+            background: rgb(197, 192, 192);
+            color: rgb(114, 84, 222);
+            margin: 5px;
+            width: 200px;
+            border-radius: 10px;
+        } */
+        button{
+            height: 50px;
+            width: 150px;
+            text-align: center;
+            background: blue;
+            color: white;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="demo()">CLICK HERE</button>
+    <p></p>
+
+    <script>
+        let demo=()=>
+        {
+            var arr=["C PROGROMMING","HTML","CSS","JAVASCRIPT","MONGODB","JIRA","GIT AND GITHUB","PUTTY"]
+            var mycolor=["red","green","orange","blue","aqua","hotpink","gray","pink","red","red","red","red",]
+            var a=0
+            var res="<ul>"
+                for(var i of arr)
+                {
+                    res=res+ "<li style='color:"+mycolor[a]+"';>"+ i +"</li>"
+                    a++
+                }
+                res+="</ul>"
+                document.querySelector("p").innerHTML=res
+                document.querySelector("p").style.padding="5px"
+
+        }
+    </script>
+</body>
+</html>

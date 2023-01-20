@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .text-color {
+          color: rgb(131, 216, 2);
+        }
+    
+        .bg-mycolor {
+          background: rgb(131, 216, 2);
+        }
+    
+        .font-size-menu {
+          font-size: 14px;
+          font-weight: bold;
+          color: rgb(212, 211, 211) !important;
+        }
+    
+        .fSA {
+          font-size: 11px !important;
+          position: relative;
+          top: -1.5px;
+        }
+    
+        .btn-outline-mycolor:hover {
+          /* background: white; */
+          background: rgb(131, 216, 2) !important;
+    
+        }
+    
+        .abc {
+          margin: 27%;
+          margin-left: 40%;
+        }
+    
+        .our-bg-color {
+          background: rgb(244, 244, 244);
+        }
+    
+        .price {
+          font-size: 15px;
+        }
+        .border-line{
+            border-bottom: 2px solid rgb(131, 216, 2) !important;
+            border-top: 0 !important;
+            border-left: 0 !important;
+            border-right: 0 !important;
+        }
+        .border-full{
+            border: 2px solid rgb(131, 216, 2) !important;
+        }
+      </style>
+</head>
+<body>
+    <div class="row mt-3">
+        <div class="col-sm-10 mx-auto">
+            <div class="row outer">
+                <div class="col-sm-12 ">
+                    <div class="fs-4 text-center"><span class="text-color"><span
+                                class="border border-end-0 border-top-0 border-start-0 border-2 border-line">
+                                Contact</span> <span class="text-dark">With Us </span></span></div>
+                    <div class="row">
+                        <div class="col-sm-7 mx-auto fs-6 text-center">Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Rerum quisquam consequatur illo dicta!</div>
+                    </div>
+                    <div class="row bg-white mt-2 outer our-bg-color">
+                        <div class="col-sm-6 p-2 pt-5 ps-5">
+                            <div class="fs-5 fw-semibold">
+                                <span class="border border-2 border-line border-top-0 border-start-0 border-end-0">Send</span>
+                                Your Message</div>
+                            <div class="row">
+                                <div class="col-sm-6 pt-2">
+                                    <div class="">Your Name :</div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="txt1" placeholder="Enter Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 pt-2">
+                                    <div class="">Your Contact :</div>
+                                    <div class="input-group pe-3">
+                                        <input type="text" class="form-control" id="txt2" placeholder="Enter Your Contact Number">
+                                    </div>
+                                </div>
+                                <div class="row pt-2">
+                                    <div class="">Your Email :</div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="txt3" placeholder="Enter Your Email">
+                                    </div>
+                                </div>
+                                <div class="row pt-2">
+                                    <div class="">Your Message :</div>
+                                    <div class="input-group">
+                                        <textarea placeholder="Type Your Message Here" id="txt4" cols="70" rows="3" itemid="txt4"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row pt-3">
+                                    <div class="col-sm-5">
+                                        <button class="p-2 px-3 text-color border-full rounded" onclick="demo()">SEND MESSAGE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 b p-2 ps-5 mt-5 our-bg-color mb-3">
+                            <div class="row">
+                                <div class="col-sm-6 fs-4"><span class="border border-2 border-line border-top-0 border-start-0 border-end-0">Contact</span> Info</div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-sm-12">
+                                    <div class="row">
+                                        <div class="col-sm-2"> 
+                                            <i class="input-group-text bg-mycolor text-white"><i class="fa-solid fa-location-dot fs-6"></i></i>
+                                        </div>
+                                        <div class="col-sm-10 text-color"><span class="border border-2 border-line">Office </span>Address</div>
+                                        <div class="row">
+                                            <div class="col-8 mx-auto">
+                                                Ploat No-44, Behind H.P Petrol Pump <br>
+                                                Lorem, ipsum dolor end. <br>
+                                                Lorem, ipsum dolor. <br>
+                                                Lorem, ipsum dolor. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2" >
+                                        <div class="col-sm-2"> 
+                                            <i class="input-group-text bg-mycolor text-white"><i class="fa-solid fa-phone"></i></i>
+                                        </div>
+                                        <div class="col-sm-10 text-color"><span class="border border-2 border-line">Office </span>Address</div>
+                                        <div class="row">
+                                            <div class="col-8 mx-auto">
+                                                +91 758464673883 <br>
+                                                +91 87484648585 <br>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2 pb-5">
+                                        <div class="col-2"> 
+                                            <i class="input-group-text bg-mycolor text-white"><i class="fa-solid fa-envelope"></i></i>
+                                        </div>
+                                        <div class="col-10 text-color"><span class="border border-2  border-line ">Office </span>Address</div>
+                                        <div class="row">
+                                            <div class="col-sm-8 mx-auto">
+                                                Ploat No-44, Behind H.P Petrol Pump <br>
+                                                Lorem, ipsum dolor end. <br>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container m-5" id="pr">
+    <div class="row">
+        <div class="col-12">
+            <span>your name :</span>
+            <input type="text" id="inp1" class="border-0">
+        </div>
+    </div>
+    <div class="col-12">
+        <span>your contact number :</span>
+        <input type="text" id="inp2" class="border-0">
+    </div>
+    <div class="col-12">
+        <span>your email address :</span>
+        <input type="text" id="inp3" class="border-0">
+    </div>
+    <div class="col-12">
+        <span>your txt message :</span>
+        <input type="text" id="inp4" class="border-0">
+    </div>
+    <div class="row">
+        <di class="col-12">
+            <button onclick="window.print()">Print me</button>
+        </di>
+    </div>
+</div>
+
+
+    <script>
+        function demo()
+        {   
+            var txt1=document.getElementById("txt1").value
+            var inp1=document.querySelector("#inp1")
+            inp1.value=txt1
+            
+            var txt2=document.getElementById("txt2").value
+            var inp2=document.querySelector("#inp2")
+            inp2.value=txt2
+
+            var txt3=document.getElementById("txt3").value
+            var inp3=document.querySelector("#inp3")
+            inp3.value=txt3
+
+            var txt4=document.getElementById("txt4").value
+            var inp4=document.querySelector("#inp4")
+            inp4.value=txt4
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="txt"> //text //password
+    <input type="button" value="SHOW" id="btn" onclick="demo()"> //hide //show
+
+    <script>
+        function demo()
+        {
+            var t=document.querySelector("#txt")
+            var b=document.querySelector("#btn")
+            // if(t.value="")
+            // {
+            if(b.value=="SHOW")  {
+                b.value="HIDE"
+                t.type="text"
+                // b.style.background="red"
+                // b.style.color="white"
+            }
+            else{
+                b.value="SHOW"
+                t.type="password"
+                // b.style.background="green"
+                // b.style.color="white"
+            }
+        }
+    // else{
+    //     alert("please enter your password")
+    // }
+// }
+    </script>
+</body>
+</html>

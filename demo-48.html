@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div onclick="demo()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta ullam,
+         quod hic optio rerum culpa tempore deserunt repellendus nisi.
+         Ea ipsa explicabo repudiandae voluptate aliquid nobis ipsum voluptatem itaque!
+        <img src="img/Feed.jpg" alt="" height="300px"><br>
+        <p style="width: 300px;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quas quia eius quaerat, nostrum placeat dolorem tenetur aperiam molestiae odit
+            molestias tempora voluptate aliquid, animi eum modi similique doloribus
+            ullam dignissimos provident illo. Enim necessitatibus pariatur, aut quisquam exercitationem,
+            eaque dolorum et fugit beatae est voluptatum a nesciunt aspernatur, ut corporis?</p>
+        
+    </div>
+    <button onclick="demo()">PRINT PAGE</button>
+
+    <script>
+       function demo()
+       {
+        // window.print() //document.body.innerHTML
+        // var dv = document.querySelector("div").innerHTML
+        document.querySelector("div").innerHTML
+        window.print("div")
+
+        // alert(document.dv.innerHTML)
+       }
+    </script>
+</body>
+
+</html>

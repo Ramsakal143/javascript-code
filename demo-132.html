@@ -1,0 +1,38 @@
+<script>
+    class Test{
+        static UserId="APP-ST257"  // Instance variable
+        static Password="ram@123"
+
+        constructor(n,a)
+        {
+            this.name=n
+            this.age=a
+
+        }
+
+        showData()  // Instance ethod
+        {
+            console.log(`
+                UserId : ${Test.UserId}
+                Password : ${Test.Password}
+                name : ${Test.name}
+                age : ${Test.age}
+            `)
+        }
+
+        static myMethod()
+        {
+            console.log(`
+                UserId : ${Test.UserId}
+                Password : ${Test.Password}
+                name : ${Test.name}
+                age : ${Test.age}
+            `)
+        }
+
+    }
+
+   Test.myMethod()
+
+   var obj=new Test("RAM",23)
+</script>

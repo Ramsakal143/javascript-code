@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    Name <br><input type="text" id="txt1" required><br>
+    Email <br><input type="text" id="txt2" required><br>
+    Mobile <br><input type="text" id="txt3" required><br>
+    Meaasge <br><textarea id="txt4"></textarea><br>
+    </form>
+    <div></div>
+    <script>
+        function demo()
+        {
+            var name=document.getElementById("txt1").value
+            var eamil=document.getElementById("txt2").value
+            var mobile=document.getElementById("txt3").value
+            var message=document.getElementById("txt4").value
+
+            var a=document.querySelector("div")
+            a.innerText=name
+        }
+    </script>
+</body>
+</html>

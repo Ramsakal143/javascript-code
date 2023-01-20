@@ -1,0 +1,32 @@
+<script>
+    class parent  //parent class / base class
+    {
+        constructor()
+        {
+            console.log("hello i am from constructor method... present in parent class")
+        }
+        method1()
+        {
+            console.log("Hello, I am fro method one present in parent class")
+        }
+        
+    }
+
+    class child extends parent         // child/derived class
+    {
+         constructor()
+        {
+            super()  // super keyword is used to supported to multi constructor
+            console.log("hello i am from constructor method... present in child class")
+        }
+        method2()
+        {
+            super.method1()
+            console.log("Hello, I am fro method two present in child class")
+        }        
+    }
+
+    var obj=new child();
+    obj.method2()
+    // obj.method1()
+</script>

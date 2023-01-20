@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    PINCODE <input type="number" id="txt" onkeyup="demo()">
+    <p id="msg"></p>
+
+    <script>
+        function demo()
+        {
+            var l=document.querySelector("#txt")
+            var p=document.querySelector("#msg")
+            if(l.value.length==6){
+                p.innerText="valid pincode"
+                p.style.color="green"
+                // p.style.border="10px solid green"
+            }
+            else{
+                p.innerText="invalid valid..."
+                p.style.color="red"
+                // p.style.border="10px solid red"
+            }
+        }
+    </script>
+</body>
+</html>

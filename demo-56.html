@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 500px;
+            width: 700px;
+            margin: 100px auto;
+            /* color: red; */
+            text-align: center;
+            line-height: 500px;
+            border: 10px solid black;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="demo()">
+        COLOR
+    </div>
+
+    <script>
+        function demo()
+        {
+            var str="0123456789abcdef"
+            var color="#"
+            var textColor="#"
+            for(var i=0;i<=5; i++)
+            {
+                var randomIndex=Math.floor(Math.random()*16)
+                var randomIndex1=Math.floor(Math.random()*16)
+
+                var randomChar=str[randomIndex]
+                var randomChar1=str[randomIndex1]
+                color=color+randomChar
+                textColor=textColor+randomChar1
+            }
+            document.querySelector("div").style.background=color
+            document.querySelector("div").style.color=textColor
+        }
+        window.setInterval(demo,1000)
+    </script>
+</body>
+</html>

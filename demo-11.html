@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    #box{
+        width: 350px;
+        background: linear-gradient(45deg,blue,skyblue);
+        padding: 15px;
+        min-height: 40px;
+        box-sizing: border-box;
+        margin: 100px auto;
+        font-size: 22px;
+        color: white;
+    }
+    .txt1{
+        height: 40px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+    }
+    .btn{
+        height: 40px;
+        width: 50%;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+        background: black;
+        color: white;
+    }
+    #header{
+        height: 45px;
+        width: 320px;
+        color: white;
+        text-align: center;
+        line-height: 45px;
+    }
+    #left{
+        width: 160px;
+        height: 45px;
+        float: left;
+        background: black;
+
+    }
+    #right{
+        width: 160px;
+        height: 45px;
+        float: left;
+        background: black;
+        /* padding-left: 1px; */
+    }
+    #reg,#login,#fpass{
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <div id="box">
+        <div id="header">
+            <div id="left" onclick="demo1()">LOGIN</div>
+            <div id="right" onclick="demo2()">REGISTER</div>
+        </div>
+
+            <p id="reg">
+                Name <br>
+                <input type="text" placeholder="Name..." class="txt1"><br>
+                mobile <br>
+                <input type="phone" placeholder="mobile..." class="txt1"><br>
+                email <br>
+                <input type="email" placeholder="email..." class="txt1"><br><br>
+                <input type="button" value="SAVE" class="btn">
+            </p>
+            <p id="login">
+                userid <br>
+                <input type="email" placeholder="userid..." class="txt1"><br>
+                Password <br>
+                <input type="password" placeholder="password..." class="txt1"><br><br>
+                <input type="button" value="Login" class="btn"><br>
+                <a href="#" id="f" style="color: white; font-size: 15px;" onclick="demo3()">Forget Password</a>
+            </p>
+            <p id="fpass">
+                Enter your register Mobile <br>
+                <input type="email" placeholder="username..." class="txt1"><br><br>
+                <input type="button" value="Send OTP" class="btn">
+            </p>
+        
+    </div>
+    <script>
+    var login=document.getElementById("login")
+    var reg=document.getElementById("reg")
+    var fpass=document.getElementById("fpass")
+    function demo1()
+    {
+        login.style.display="block"
+        fpass.style.display="none"
+        reg.style.display="none"
+    }
+    function demo2()
+    {
+        login.style.display="none"
+        fpass.style.display="none"
+        reg.style.display="block"
+    }
+    function demo3()
+    {
+        login.style.display="none"
+        fpass.style.display="block"
+        reg.style.display="none"
+    }
+</script>
+</body>
+</html>

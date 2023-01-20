@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .outer{
+            margin: auto;
+        }
+        .inner{
+            height: 200px;
+            width: 200px;
+            background: blue;
+            color: red;
+            text-align: justify;
+            padding: 5px;
+        }
+        .btn{
+            text-align: center;
+            background: red;
+            font-weight: bold;
+            color: white;
+            width: 200px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer" >
+        <div class="inner" id="onj">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Reprehenderit porro cumque est laborum numquam ut rem provident reiciendis id alias.
+        </div>
+        <input type="text" class="btn" value="set style" onclick="demo()" >
+    </div>
+    
+    <script>
+        function demo()
+        {
+            var x = document.getElementById("onj");
+            x.style.color="blue"
+            x.style.border="5px solid black"
+            x.style.transform="rotate(360deg)"
+            x.style.height="200px"
+            x.style.width="200px"
+            x.style.background="white"
+            x.style.boxSizing="border-box"
+            x.style.transform="rotate(360deg)"
+            x.style.transition="5s"
+        }
+    </script>
+</body>
+</html>

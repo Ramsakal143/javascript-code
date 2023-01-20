@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // var arr=["RAM","RAHUL","MOHAN","SHYAM","RAJ","HOT"]
+        // var arr1=[]
+        // arr.forEach((data)=>{
+        //     if(data[0]=="R" && data.length%3==0){
+        //         arr1.push(data)
+
+        //     }
+        // })
+
+        // var arr=["RAM","RAHUL","MOHAN","SHYAM","RAJ","HOT"]
+        // var arr1=[]
+        //  arr.forEach((data)=>{
+        //     var x=data[0].toUpperCase()+data.slice(1).toLocaleLowerCase()
+        //     arr1.push(x)
+        //  })
+        //  alert(arr1)
+
+        var arr=["RAM","RAHUL","MOHAN","SHYAM","RAJ","HOT"]
+            var arr1=arr.map((data)=>{
+                return data[0].toUpperCase()+data.slice(1).toLocaleLowerCase();
+            })
+            alert(arr1)
+
+        alert(arr1)
+    </script>
+</body>
+</html>

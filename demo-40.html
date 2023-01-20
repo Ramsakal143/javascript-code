@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="abc">para1</p>
+    <p class="abc">para2</p>
+    <p id="b" class="abc">para3</p>
+    <p class="abc">para4</p>
+    <button onclick="demo()">click me</button>
+    <script>
+        var demo = () => {
+            // var x = document.getElementsByClassName("abc")[0].innerText
+            // var x = document.getElementsByClassName("abc")[0].
+            // innerText="TECHPILE"
+            
+        //    x = document.getElementsByClassName("abc").item(1).innerText
+        
+        // x = document.getElementsByClassName("abc").namedItem("b")
+        //    alert(x)
+
+
+        var x=document.getElementsByClassName("abc")
+        // for(var i of x){
+        //     alert(i.innerText)
+        // }
+
+        x.forEach((data) => {
+            alert(data)
+        });
+        }
+    </script>
+</body>
+
+</html>

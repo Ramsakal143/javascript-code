@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <button onclick="demo()">CLICK ME</button>
+
+<script>
+        var arr = []
+        for (var i = 0; i < 9; i++) {
+            x = prompt("Enter your name.....")
+            // arr[i] = x
+            arr.push(x)
+
+        }
+        // for (var a of arr) {
+        //     document.write(`${a} <br/>`)
+        // }
+
+        var demo = () => {
+            var res = "<select>"
+            for (var me of arr) {
+                res = res + "<option>" + me + "</option>"
+            }
+            res += "</select>"
+            document.querySelector("p").innerHTML = res
+
+        }
+    </script>
+</body>
+
+</html>

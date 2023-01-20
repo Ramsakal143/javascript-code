@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="outer">
+        <select>
+            <option>--State--</option>
+            <option>U.P</option>
+            <option>M.P</option>
+            <option>Delli</option>
+        </select>
+    </div>
+    <div>
+        <p></p>
+    </div>
+
+
+    <script>
+        document.querySelector("select").addEventListener("change", demo)
+        function demo() {
+            // alert(this.value)
+            if("U.P"==this.value){
+                var arr=["--city--","Lucknow","Banaras","Prayagraj","Chandauli"]
+                    var res="<select>"
+                        for(var me of arr){
+                            res=res+"<option>"+me+"</option>"
+                            // alert(me)
+                        }
+                    res += "</select>"
+                    document.querySelector("p").innerHTML = res
+
+            }
+            else if("M.P"==this.value){
+                var arr=["--city--","Delli","Chennai","Madhurai","Kolkata"]
+                    var res="<select>"
+                        for(var me of arr){
+                            res=res+"<option>"+me+"</option>"
+                            // alert(me)
+                        }
+                    res += "</select>"
+                    document.querySelector("p").innerHTML = res
+
+            }
+            else if("Delli"==this.value){
+                var arr=["--city--","New Delli","Noida","Madhurai","Kolkata"]
+                    var res="<select>"
+                        for(var me of arr){
+                            res=res+"<option>"+me+"</option>"
+                            // alert(me)
+                        }
+                    res += "</select>"
+                    document.querySelector("p").innerHTML = res
+
+            }
+        }
+
+
+       
+    </script>
+</body>
+
+</html>

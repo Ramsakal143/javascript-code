@@ -1,0 +1,27 @@
+<script>
+    class parent
+    {
+        static userName='ram@gmail.com' //static variable
+        #password=12345  // private variable
+
+        set demo(pwd)
+        {
+            this.#password=pwd
+            
+        }
+        get show()
+        {
+            console.log(`
+                userId : ${parent.userName}
+                password : ${this.#password}
+            `)
+        }
+    }
+    var obj=new parent()
+    // obj.demo()
+    parent.userName='abhi@gmail.com'
+    obj.show
+
+    // obj.
+    // console.log(parent.#password)  // this is encapsulation fields
+</script>

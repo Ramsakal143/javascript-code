@@ -1,0 +1,35 @@
+<script>
+    class Test{
+        static company="Techpile"  //class variable name
+        constructor()  
+        {
+            this.Name="ABHI"  //object variable name
+            this.Age=19
+            this.Salary=12000
+        }
+        demo()
+        {
+            console.log(`
+                name : ${this.Name}
+                age : ${this.Age}
+                salary : ${this.Salary}
+                company : ${Test.company}
+            `)
+        }
+
+    }
+
+    var obj=new Test()
+    console.log(obj)
+    obj.demo()
+
+    // console.log(obj.Name)
+    // console.log(obj.Age)
+    // console.log(obj.Salary)
+
+    // console.log(Test.company) // access to company
+    // Test.company="Wipro"
+    // console.log(Test.company)
+
+    
+</script>

@@ -1,0 +1,48 @@
+<script>
+    class parent
+    {
+        constructor()
+        {
+            console.log("hello i am from constructor...present in parent class")
+        }
+        method1()
+        {
+            return 'good morning'
+        }
+    }
+
+    class child extends parent
+    {
+        constructor()
+        {
+            super()
+            console.log("hello i am from constructor...present in child class")
+        }
+        method2()
+        {
+            super.method1()
+            return 'good afternoon'
+        }
+    }
+    class subChild extends parent
+    {
+        constructor()
+        {
+            super()
+            console.log("hello i am from constructor...present in subChild class")
+        }
+        method3()
+        {
+            super.method1()
+            return 'good night'
+        }
+    }
+    // var obj1=new parent()
+    // console.log(obj1.method1())
+
+    // var obj2=new child()
+    // console.log(obj2.method2())
+    
+    var obj3=new subChild()
+    console.log(obj3.method3())
+</script>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        .outer {
+            height: 500px;
+            width: 800px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid outer border border-2 rounded-3">
+        <h2 class="text-center p-2">Register With Us</h2>
+        <div class=" row ms-5 mt-2">
+            <form></form>
+            <div class="col-5">
+                <span>Enroll No :</span><br>
+                <input type="text" class="form-control m-0" placeholder="TPT-SP22" id="enroll">
+            </div>
+            <div class="col-5 ms-2">
+                <span>Today Is :</span><br>
+                <input type="date" class="form-control m-0" id="today">
+            </div>
+        </div>
+        <div class=" row ms-5 mt-2">
+            <div class="col-5">
+                <span>Name :</span><br>
+                <input type="text" class="form-control m-0" id="name1" placeholder="Username">
+            </div>
+            <div class="col-5 ms-2">
+                <span>Apply For :</span><br>
+                <!-- <input type="text" class="form-control m-0" id="apply"> -->
+                <select id="apply" class="w-100 border rounded-2" style="height: 38px;">
+                    <option>Select Trainning Name</option>
+                    <option>Summer Trainning</option>
+                    <option>Winter Trainning</option>
+                    <option>Apprenticeship Trainning </option>
+                    <option>Other </option>
+                </select>
+            </div>
+        </div>
+        <div class=" row ms-5 mt-2">
+            <div class="col-5">
+                <span>College Name :</span><br>
+                <input type="text" class="form-control m-0" id="collName">
+            </div>
+            <div class="col-5 ms-2">
+                <span>Course :</span><br>
+                <!-- <input type="text" class="form-control m-0" id="course"> -->
+                <select id="course" class="w-100 border rounded-2" style="height: 38px;">
+                    <option>Select Your Course</option>
+                    <option>Diploma (C.S)</option>
+                    <option>Diploma (I.T)</option>
+                    <option>B.Tech (C.S) </option>
+                    <option>B.Tech (I.T) </option>
+                    <option>B.C.A </option>
+                    <option>M.Tech </option>
+                    <option>Other </option>
+                </select>
+            </div>
+        </div>
+        <div class=" row ms-5 mt-2">
+            <div class="col-5">
+                <span>Year :</span><br>
+                <!-- <input type="text" class="form-control m-0" id="year"> -->
+                <select id="year" class="w-100 border rounded-2" style="height: 38px;">
+                    <option>Select Your Year</option>
+                    <option>First</option>
+                    <option>Second</option>
+                    <option>Third</option>
+                    <option>Fourth </option>
+                </select>
+            </div>
+            <div class="col-5 ms-2">
+                <span>Contact No :</span><br>
+                <input type="text" class="form-control m-0" id="contact" placeholder="Mobile No">
+            </div>
+        </div>
+        <div class=" row ms-5 mt-2">
+            <div class="col-5">
+                <span>Email Id :</span><br>
+                <input type="email" class="form-control m-0" id="email" placeholder="Email Id">
+            </div>
+            <div class="col-5 ms-2">
+                <span>Amount :</span><br>
+                <input type="number" class="form-control m-0" id="amount" disabled>
+            </div>
+        </div>
+        <div class="row ms-5 mt-2">
+            <div class="col-3">
+                <input type="button" class="btn btn-primary" value="SAVE" id="btn" onclick="add()">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p id="t"></p>
+    <script>
+        var student_reg = []
+
+        var enroll = document.querySelector('#enroll')
+        var today = document.querySelector('#today')
+        var name1 = document.querySelector('#name1')
+        var apply = document.querySelector('#apply')
+        var collName = document.querySelector('#collName')
+        var course = document.querySelector('#course')
+        var year = document.querySelector('#year')
+        var contact = document.querySelector('#contact')
+        var email = document.querySelector('#email')
+        var amount = document.querySelector('#amount')
+        var btn = document.querySelector("#btn")
+
+
+        function add() {
+            student_reg.push({
+                enroll: enroll.value,
+                today: today.value,
+                name1: name1.value,
+                apply: apply.value,
+                collName: collName.value,
+                course: course.value,
+                year: year.value,
+                contact: contact.value,
+                email: email.value,
+                amount: amount.value,
+            })
+            // alert(student_reg)
+
+            showData()
+        }
+
+        function showData() {
+
+            var res = `<table class="table table-hover">
+                <tr class="bg-info text-white">
+                <th>Enroll No </th> 
+                <th>Today</th> 
+                <th>Name</th> 
+                <th>Apply</th> 
+                <th>College Name</th> 
+                <th>Course</th> 
+                <th>Year</th> 
+                <th>Contact</th> 
+                <th>Email</th> 
+                <th>Amount</th> 
+                <th>Edit</th>
+                <th>Delete</th>  
+                </tr>`
+            student_reg.forEach((data) => {
+                res +=
+                    `
+                <tr>
+                    <td>${data.enroll}</td>
+                    <td>${data.today}</td>
+                    <td>${data.name1}</td>
+                    <td>${data.apply}</td>
+                    <td>${data.collName}</td>
+                    <td>${data.course}</td>
+                    <td>${data.year}</td>
+                    <td>${data.contact}</td>
+                    <td>${data.email}</td>
+                    <td>${data.amount}</td>
+                    <td><button class='btn btn-primary' onclick="edit(this)">Edit</button></td>
+                    <td><button class='btn btn-primary' onclick="remove(this)">Delete</button></td>
+                </tr>
+                `
+            })
+            res += '</table>'
+            document.querySelector('#t').innerHTML = res
+        }
+
+        function remove(x) {
+            var toDelete = x.parentElement.parentElement.firstElementChild.innerText - 1
+            alert(toDelete)
+            var status=window.confirm('are you sure delete this student ...?')
+            if(status==true){
+            student_reg.splice(toDelete, 1)
+            }
+            showData()
+        }
+        function edit(x) {
+            i=x.parentElement.parentElement.firstElementChild.innerText-1
+            btn.value = "UPDATE"
+            alert(i)
+            // enroll.value = student_reg[i].enroll
+            // today.value = student_reg[i].today
+            // name1.value = student_reg[i].name1
+            // apply.value = student_reg[i].apply
+            // collName.value = student_reg[i].collName
+            // course.value = student_reg[i].course
+            // year.value = student_reg[i].year
+            // email.value = student_reg[i].email
+            // contact.value = student_reg[i].contact
+            // amount.value = student_reg[i].amount
+
+
+
+
+
+           
+
+        }
+    </script>
+</body>
+
+</html>

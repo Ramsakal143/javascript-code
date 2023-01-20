@@ -1,0 +1,16 @@
+<script>
+    class parent   //method overloading
+    {
+        method1(x)  
+        {
+            console.log(x)
+        }
+        method1(x,y)
+        {
+            console.log(`${x} and ${y}`)
+        }
+    }
+    var obj=new parent()
+    obj.method1(12)
+    obj.method1(12,23)
+</script>

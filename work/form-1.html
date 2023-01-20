@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .outer {
+            min-height: 50px;
+            background: linear-gradient(60deg, rgb(245, 205, 150),rgb(252, 127, 127), rgb(252, 183, 226));
+            width: 400px;
+            margin-top: 50px;
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+        #reg,#login{
+            display: none;
+        }
+        #second{
+            display: none;
+        }
+        ::placeholder{
+            color: green;
+            font-size: 20px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row outer mx-auto">
+            <div class="col-12 top">
+                <div class="row text-center mt-3 mb-3">
+                    <div class="col-12 mx-auto" >
+                        <button class="border-0 p-1 pe-4 ps-4 fs-5 fw-bold rounded text-white mx-auto" onclick="demo1()" id="first" style="background: rgb(242, 76, 76);">REGISTER</button>
+                        <button class="border-0 p-1 pe-4 ps-4 fs-5 fw-bold rounded text-white mx-auto" onclick="demo2()" id="second" style="background: rgb(242, 76, 76);">LOGIN</button>
+                    </div>
+                    <!-- <div class="col-6"></div> -->
+                </div>
+            </div>
+            <div id="reg">
+                <div class="col-12 pt-3 pb-3">
+                    <input type="text" placeholder="Enter Your Name..." class="form-control p-2" style="background: transparent; color: white; border-bottom: 2px solid red; border-top: 0px; border-left: 0; border-right: 0;">
+                </div>
+                <div class="col-12 pb-3">
+                    <input type="text" placeholder="Enter Father Name..." class="form-control p-2" style="background: transparent; color: white; border-bottom: 2px solid black; border-top: 0px; border-left: 0; border-right: 0;">
+                </div>
+                <div class="col-12 pb-3">
+                    <input type="email" placeholder="Enter Your email..." class="form-control p-2" style="background: transparent; color: white; border-bottom: 2px solid black; border-top: 0px; border-left: 0; border-right: 0;">
+                </div>
+                <div class="col-12 pb-3">
+                    <input type="college" placeholder="Enter Your College Name..." class="form-control p-2" style="background: transparent; color: white; border-bottom: 2px solid black; border-top: 0px; border-left: 0; border-right: 0;">
+                </div>
+                <div class="col-12 pb-3">
+                    <input type="text" placeholder="Enter Your state..." class="form-control p-2" style="background: transparent; color: white; border-bottom: 2px solid black; border-top: 0px; border-left: 0; border-right: 0;">
+                </div>
+            </div>
+            <div id="login">
+                <div class="col-12 pt-3 pb-3">
+                    <input type="text" placeholder="Enter Username..." class="form-control p-2" style="background: transparent; color: white; border-bottom: 2px solid black; border-top: 0px; border-left: 0; border-right: 0;">
+                </div>
+                <div class="col-12 pb-3">
+                    <input type="text" placeholder="Enter Your Password..." class="form-control p-2" style="background: transparent; color: white; border-bottom: 2px solid black; border-top: 0px; border-left: 0; border-right: 0;">
+                </div>
+                <div class="col-12 pb-3">
+                    <input type="text" placeholder="Enter Confirm Password..." class="form-control p-2" style="background: transparent; color: white; border-bottom: 2px solid black; border-top: 0px; border-left: 0; border-right: 0;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function demo1(){
+            var x=confirm("are you sure submit your details ?")
+            if(x==true){
+                document.getElementById("reg").style.display="none"
+                document.getElementById("login").style.display="block"
+
+                document.getElementById("first").style.display="none"
+                document.getElementById("second").style.display="block"
+                
+            }
+        }
+        function demo2(){
+            var y=confirm("Login successfully.....")
+            if(y==true){
+                document.getElementById("reg").style.display="block"
+                document.getElementById("login").style.display="none"
+
+                document.getElementById("first").style.display="block"
+                document.getElementById("second").style.display="none"
+            }
+        }
+        
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

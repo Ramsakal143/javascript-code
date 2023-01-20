@@ -1,0 +1,19 @@
+<script>
+    class parent
+    {
+        cal(x,y)
+        {
+            return x*y
+        }
+    }
+    class child extends parent
+    {
+        cal(x,y)
+        {
+            return x**y
+        }
+    }
+    var obj=new child()
+    console.log('result : '+obj.cal(2,3))
+
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>this change state to print distic</title>
+</head>
+
+<body>
+    <p></p>
+    <b></b>
+
+    <script>
+        var MyState = ["UP", "MP", "BIHAR"]
+        var ddl = "<select onchange='myCity(this)'>"
+        for (var x of MyState) {
+            ddl = ddl + "<option>" + x + "</option>"
+        }
+        ddl += "</select>"
+        document.querySelector("p").innerHTML = ddl
+
+        function myCity(a) 
+        {
+            // alert(a)
+            var ucity = ["Lucknow", "Varanasi", "Kanpur"]
+            var mcity = ["Katani", "Satna", "Bhopal"]
+            var bcity = ["Ara", "Chapra", "Patana"]
+
+            var city = "<select>"
+            if (a.value == "UP") {
+                for(var x of ucity){
+                    city+="<option>"+x+"</option>"
+                }
+            }
+            if (a.value == "MP") {
+                for(var y of mcity){
+                    city+="<option>"+y+"</option>"
+                }
+            }
+            if (a.value == "BIHAR") {
+                for(var z of bcity){
+                    city+="<option>"+z+"</option>"
+                }
+            }
+            city+="</select>"
+            document.querySelector("b").innerHTML=city
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box{
+            height: 400px;
+            width: 600px;
+            background: url("../img/Feed.jpg");
+            background-size: 100% 100%;
+            text-align: center;
+            line-height: 400px;
+            font-size: 50px;
+            margin: 50px auto;
+            /* border: 5px solid orange; */
+            border-radius: 10px ;
+        }
+        #inner{
+            height: 100%;
+            width: 100%;
+            background: rgba(242, 82, 82,.5);
+            background: rgba(241, 28, 181, 0.3);
+            order: 5px solid orange;
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Slidding Image and Background color and border</h1>
+    </center>
+    <hr>
+    <div id="box"><div id="inner">WelCome toTechpile</div></div>
+
+    <script>
+        var txt=["Welcome to Km","Hi, I am ram Sakal","Hello you are so prity","Dev Ninja channel",]
+        var arr=["hero-1.jpg","hero-2.jpg","hero-3.jpg","k1.jpg",]
+        var mycolor=["rgba(58, 13, 218, 0.5)","rgba(23, 189, 100, 0.5)","rgba(243, 232, 33, 0.5)","rgba(241, 28, 181, 0.5)"]
+        var myborder=["5px solid black","5px solid red","5px solid blue","5px solid green",]
+        var txtcolor=["black","red","blue","green",]
+        i=0
+        function demo()
+        {
+            var dv=document.querySelector("#box")
+            var my=document.querySelector("#inner")
+            dv.style.background="url('../img/"+arr[i]+"')"
+            dv.style.backgroundSize="100% 100%"
+            dv.style.color="red"
+            my.style.background=mycolor[i]
+            my.style.border=myborder[i]
+            my.style.borderRadius="10px"
+            my.style.color=txtcolor[i]
+            my.innerText=txt[i]
+            
+            i++
+            if(i==arr.length)
+            i=0
+        }
+        setInterval(demo,2000)
+    </script>
+</body>
+</html>

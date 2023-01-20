@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" onchange="demo(this)" id="fu" />
+    <b></b><br/>
+    <button disabled>SAVE</button>
+
+    <script>
+        function demo(x)
+        {
+            var btn=document.querySelector("button")
+            var b=document.querySelector("b")
+            var fullPath=x.value
+            var ext=fullPath.slice(fullPath.lastIndexOf('.')+1).toUpperCase()
+            if(ext=="JPG" || ext=="JPEG" || ext=="PNG" || ext=="PSD"){
+                b.innerText="Valid image..."
+                b.style.color="green"
+                btn.removeAttribute("disabled")
+                
+            }
+            else{
+                b.innerText="Invalid image..."
+                b.style.color="red"
+                btn.setAttribute("disabled")
+            }
+        }
+    </script>
+</body>
+</html>

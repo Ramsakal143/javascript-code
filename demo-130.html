@@ -1,0 +1,32 @@
+<script>
+    class empInfo
+    {
+        constructor(name,age,salary,company)
+        {
+            this.Name=name
+            this.Age=age
+            this.Salary=salary
+            this.Company=company
+        }
+        showData()   // getter function
+        {
+            console.log(`
+                my name is : ${this.Name}
+                my age is : ${this.Age}
+                my Salary is : ${this.Salary}
+                my Company is : ${this.Company}
+            `)
+        }
+                                   
+        setshow()  // setter function
+        {
+            this.Name="abhi"
+
+        }
+    }
+    var data=new empInfo('RAM SAKAL',19,20000,'techpile')
+    // console.log(data)
+    data.showData()
+
+    data.setshow()
+</script>

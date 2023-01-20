@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #outer
+        {
+            height: 400px;
+            width: 300px;
+            /* background: gray; */
+            /* border: 5px solid rebeccapurple; */
+            /* margin: 20px auto; */
+            /* text-align: center; */
+        
+        /* .inner{
+            height: 200px;
+            width: 400px;
+            background: skyblue;
+        } */
+        p{
+            height: 45px;
+            width: 200px;
+            border-radius: 5px;
+            background: url("img/Feed.jpg");
+            background-size: cover;
+            letter-spacing: 4px;
+            text-align: center;
+            line-height: 45px;
+
+        }
+        img{
+            height: 30px;
+            /* margin-top: 10px; */
+            position: absolute;
+            left: 220px;
+            top: 25px;
+        }
+    </style>
+</head>
+<body onload="demo()">
+    <div id="outer">
+        <p><s>Ram123</s><img src="img/ref.jfif" alt="" onclick="demo()"></p><br><br>
+        <input type="text" /><b>MSG </b> <br>
+        <button onclick="demo1()">SAVE</button>
+        <!-- <div class="inner"></div> -->
+        
+    </div>
+
+    <script>
+        function demo()
+        {
+            var str="hfshflsn@cnf&sdu#fhhgl83047298$@"
+            var len=str.length
+            var captcha=" "
+            for(var i=0; i<=5; i++){
+                var rIndex=Math.floor(Math.random()*len)
+                captcha=captcha+rIndex
+            }
+            document.querySelector("s").innerText=captcha
+           
+        }
+        function demo1()
+        {
+            var c=document.querySelector("s")
+            var v=document.querySelector("input")
+            var msg=document.querySelector("b")
+
+            if(c.innerText==v.value){
+                c.style.border="3px solid green"
+                v.style.border="3px solid green"
+                msg.innerText="valid Captcha Code"
+                msg.style.color="green"
+            }
+            else{
+                c.style.border="3px solid red"
+                v.style.border="3px solid red"
+                msg.innerText="valid Captcha Code"
+                msg.style.color="red"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<script>
+    class parent
+    {
+        constructor()
+        {
+            this.name='Rohan'
+            this.age=25
+        }
+        showData1()
+        {
+            // console.log("name : ",(this.name))
+            // console.log("age : ",(this.age))
+
+            return `
+                name : ${this.name}
+                age : ${this.age}
+            `
+        }
+    }
+    class child extends parent
+    {
+        constructor()
+        {
+            super()
+            this.salary=20000
+
+        }
+        showData2()
+        {
+            
+            console.log(`
+        
+            ${super.showData1()}
+                salary : ${this.salary}
+                
+            `)
+        }
+
+    }
+    var obj=new child()
+    // obj.showData1()
+
+    obj.showData2()
+</script>

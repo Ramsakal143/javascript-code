@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 60px;
+            text-align: center;
+            padding: 50px;
+
+        }
+        .a{
+            color: red;
+            background: yellow;
+        }
+        .b{
+            color: yellow;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="a">WELCOME TO TECHPILE</h1>
+    <button onclick="demo()">CHANGE COLOR</button>
+    <script>
+        function demo()
+        {
+            var x=document.querySelector("h1")
+            if(x.getAttribute("class")=="a"){
+                x.setAttribute("class","b")
+            }
+            else{
+                x.setAttribute("class","a")
+            }
+        }
+        window.setInterval(demo,1000)
+    </script>
+</body>
+</html>

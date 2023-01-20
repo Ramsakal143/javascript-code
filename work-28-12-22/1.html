@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            text-align: justify;
+        }
+
+        table {
+            margin: 0px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+
+
+        <form action="">
+            <table>
+                <tr>
+                    <td>Roll No. :</td>
+                    <td><input type="number" id="roll" /></td>
+                </tr>
+                <tr>
+                    <td>Name :</td>
+                    <td> <input type="text" id="name" /></td>
+                </tr><br>
+                <tr>
+                    <td>Age :</td>
+                    <td> <input type="number" id="age" /></td>
+                </tr><br>
+                <tr>
+                    <td>Branch :</td>
+                    <td> <input type="text" id="branch" /></td>
+                </tr><br>
+                <tr>
+                    <td>City :</td>
+                    <td> <input type="text" id="city" /></td>
+                </tr><br>
+                <tr>
+                    <td>State :</td>
+                    <td> <input type="text" id="state" /></td>
+                </tr><br>
+                <tr>
+                    <td>choose :</td>
+                    <td> <input type="file" id="Profile" /></td>
+                </tr><br>
+                <tr>
+                    <td>
+                </tr>
+                <td> <input type="submit" onclick="demo()"></td>
+                </tr>
+            </table>
+        </form>
+        
+
+        <h2 align="center">STUDENT DATA</h2>
+        <hr>
+        <table rules="all" border="1" cellpadding="10">
+            <thead style="background: rgb(190, 190, 190);">
+                <th>Roll No.</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Branch</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Profile</th>
+            </thead>
+            <tbody id="student_data">
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var studentData = [
+            {
+                roll: 1001,
+                name: "RAM SAKAL",
+                age: 19,
+                branch: "CSE",
+                city: "Gonda",
+                state: "U.P.",
+                image: "banner-1.jpg",
+            },
+            {
+                roll: 1001,
+                name: "RAM SAKAL",
+                age: 19,
+                branch: "CSE",
+                city: "Gonda",
+                state: "U.P.",
+                image: "banner-1.jpg",
+            },
+            {
+                roll: 1001,
+                name: "RAM SAKAL",
+                age: 19,
+                branch: "CSE",
+                city: "Gonda",
+                state: "U.P."
+            },
+            {
+                roll: 1001,
+                name: "RAM SAKAL",
+                age: 19,
+                branch: "CSE",
+                city: "Gonda",
+                state: "U.P."
+            },
+        ]
+
+        // var roll=document.querySelector("#roll")
+        // var name=document.querySelector("#name")
+        // var age=document.querySelector("#age")
+        // var branch=document.querySelector("#branch")
+        // var city=document.querySelector("#city")
+        // var state=document.querySelector("#state")
+        // var profile=document.querySelector("#roll")
+
+            
+        
+
+        // function demo(){
+        //     var collections=[roll.value,name.value,age.value,branch.value,city.value,state.value]
+        //     // alert(collections)
+        
+
+
+        res = ""
+        studentData.forEach((data, index) => {
+            res += `
+            <tr>
+                <td>${data.roll}</td>
+                <td>${data.name}</td>
+                <td>${data.age}</td>
+                <td>${data.branch}</td>
+                <td>${data.city}</td>
+                <td>${data.state}</td>
+                <td><img src='./image/${data.profile}' height="30px" alt="pick" /></td>
+            </tr>
+            `
+        })
+        document.querySelector('#student_data').innerHTML = res
+    
+    
+
+
+    </script>
+</body>
+
+</html>

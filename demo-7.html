@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .outer{
+            margin:auto;
+            background: rgb(240, 237, 237);
+            height: 330px;
+            width: 300px;
+        }
+        .btn{
+            height: 38px;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-weight: bold;
+            font-size: 18px;
+            background: aqua;
+            color: white;
+        }
+        .main{
+            height: 130px;
+            width: 100%;
+            margin-top: 10px;
+            background: blue;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .inp1{
+            height: 30px;
+            margin: 2px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="top">
+            <button class="btn" onclick="demo()">LOGIN</button>
+            <button class="btn" style="float: right;" onclick="demo1()">REGISTRATION</button>
+        </div>
+        <div class="main" id="ram">
+            <input type="text" placeholder="Enter Your Name" class="inp1"><br>
+            <input type="text" placeholder="Enter Your Email" class="inp1"><br>
+            <input type="submit" value="LOGIN" style="padding-left: 5px; padding-right: 5px; height: 32px; text-align: center; width: 150px; margin-left: 5px; border-radius: 5px; border: 0px; color: darkgrey; font-weight: bold;">
+        </div>
+
+        <div class="main" id="ashish">
+            <input type="text" placeholder="Enter Your Name" class="inp1"><br>
+            <input type="text" placeholder="Enter Your Email" class="inp1"><br>
+            <input type="submit" value="REGISTRATION" style="padding-left: 5px; padding-right: 5px; height: 32px; text-align: center; width: 150px; margin-left: 5px; border-radius: 5px; border: 0px; color: darkgrey; font-weight: bold;">
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById("ram")
+        x.style.display="none"
+        function demo()
+        {
+            x.style.display="block"
+        }
+
+        var y=document.getElementById("ashish")
+        y.style.display="none"
+        function demo1()
+        {
+            y.style.display="block"
+        }
+    </script>
+</body>
+</html>

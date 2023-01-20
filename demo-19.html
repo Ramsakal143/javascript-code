@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 500px;
+            width: 600px;
+            border: 20px groove aqua;
+            border-radius: 10px;
+            box-sizing: border-box;
+            color: black;
+            text-align: center;
+            line-height: 500px;
+            font-size: 60px;
+            font-family: impact;
+            margin: 0 auto;
+            background: url("/img/our-5.PNG");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>SLIDER</h1>
+    <hr>
+    </center>
+    <div id="box">MESSAGE</div>
+
+    <script>
+        var txt =["WELCOME TO RAM","WELCOME TO ABHI","ASHISH PATEL","RAM SAKAL PATEL"]
+        var arr =["our-4.PNG","our-5.PNG","our-6.PNG","page-1.PNG"]
+        var i=0
+        function demo(){
+            var dv=document.querySelector("#box")
+            dv.style.background="url('img/"+arr[i]+"')"
+            // dv.style.background="url('"+arr[i]+"')"
+            dv.style.backgroundSize="cover"
+            dv.innerText=txt[i]
+            i++
+            if(i==arr.length)
+            i=0
+        }
+        window.setInterval(demo,2000)
+        
+    </script>
+</body>
+</html>

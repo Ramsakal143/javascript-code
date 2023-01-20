@@ -1,0 +1,32 @@
+<script>
+    // var obj1={
+    //     name:"RAM",
+    //     age :19,
+    //     salary:30000
+    // }
+    // var obj2={
+    //     name:"bahu",
+    //     age :43,
+    //     salary:39000
+    // }
+    // var obj3={
+    //     name:"ROHAN",
+    //     age :22,
+    //     salary:120000
+    // }
+    function demo(x,y,z){
+        this.name=x
+        this.age=y
+        this.salary=z
+    }
+
+    demo.prototype.Branch="CSE"
+
+    var obj1=new demo("RAM",23,20000)
+    var obj2=new demo("ramcaharan",13,23000)
+    var obj3=new demo("ramjanam patel",33,25000)
+
+    console.log(obj1)
+    console.log(obj2)
+    console.log(obj3)
+</script>

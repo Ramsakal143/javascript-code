@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    .img1{
+        height: 200px;
+        width: 300px;
+        border: 10px groove aqua;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px 2px black inset;
+        margin: 10px;
+    }
+    #modal{
+        width: 100%;
+        min-height: 700px;
+        background: rgba(0, 0, 0,.6);
+        position: fixed;
+        top: 0;
+        display: none;
+
+    }
+    #modal-inner{
+        min-height: 300px;
+        width: 600px;
+        border-radius: 10px;
+        padding: 25px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 15px 2px white;
+        background: white;
+        margin-top: 100px;
+    }
+    #img-main{
+        width: 300px;
+        max-height: 300px;
+    }
+</style>
+<body>
+    <center>
+    <h1>IMAGE GALLERY</h1>
+    <img src="img/Feed.jpg" alt="" class="img1" onclick="demo(this)">
+    <img src="img/feed1.jpg" alt="" class="img1" onclick="demo(this)">
+    <img src="img/frock.jpg" alt="" class="img1" onclick="demo(this)"><br>
+    <img src="img/hero-1.jpg" alt="" class="img1" onclick="demo(this)">
+    <img src="img/hero-2.jpg" alt="" class="img1" onclick="demo(this)">
+    <img src="img/hero-3.jpg" alt="" class="img1" onclick="demo(this)">
+    
+    <!-- start modal -->
+    <div id="modal">
+        <div id="modal-inner">
+            <div style="text-align: center; font-size: 30px; ">Image <b style="color: red;">Gallery</b> 
+                <b style="color: red; font-size: 15px; float: right; cursor: pointer;" onclick="demo1()">X</b></div><hr>
+            <img src="img/Feed.jpg" alt="" id="img-main">
+        </div>
+    </div>
+    <!-- End Modal -->
+</center>
+
+<script>
+    function demo(a)
+    {
+        var modal=document.querySelector("#modal")
+        modal.style.display="block"
+        document.querySelector("#img-main").src=a.src
+    }
+    function demo1()
+    {
+        var modal=document.querySelector("#modal")
+        modal.style.display="none"
+
+    }
+
+</script>
+</body>
+</html>
